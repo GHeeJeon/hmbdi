@@ -10,9 +10,8 @@ router.get('/', function(req, res) {
   res.render('index', {
     words: wordStorage.getWords(),
     title: '단어시험',
-    time: new Date().toISOString(),
     ip: req.ip
-  }); //응답코드
+  });
 
 });
 
