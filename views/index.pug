@@ -5,3 +5,7 @@ block content
   p Welcome to #{title}
   h1 현재 시각은 #{time}
   p ip 주소는 #{ip}
+
+  ul
+    each word in words
+      li= '단어: ' + word.word + ', 뜻: ' + word.meanings
