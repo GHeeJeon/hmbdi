@@ -1,11 +1,18 @@
 extends layout
 
 block content
-  h1= title
+  h1= #{title}
   p Welcome to #{title}
   h1 현재 시각은 #{time}
   p ip 주소는 #{ip}
 
-  ul
+  table(style='width:25%; text-align: center;', border='1')
+    tr
+      th= '단어'
+      th= '뜻'
+
     each word in words
-      li= '단어: ' + word.word + ', 뜻: ' + word.meanings
+      tr
+        td= word.word
+        td= word.meanings
+
